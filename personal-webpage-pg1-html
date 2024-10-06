@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name=author content="Maggie Yan">
+    <title>Maggie Yan</title>
+</head>
+<body>
+<main>
+    <div class="header-bg-sm">
+        <div class="page container-fluid">
+            <div class="section-container-nav">
+                <a href="index2.html"> 
+                    <h3>
+                    Design Portfolio
+                    </h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page container-fluid">
+        <!--HERO COPY-->
+        <div class="section-container">
+            <div class="hero-copy-secondary">
+                Nice to meet you! I'm
+            </div>
+            <div class="hero-copy-primary">
+                Maggie Yan
+            </div>
+                <p id="bio">
+                I'm a sophomore at Wellesley College,
+                majoring in <strong>Media Arts & Sciences 
+                (CS + Design)</strong> and minoring in 
+                <strong>Economics</strong>,
+                with an interest in UX/UI design, web 
+                design, and product design. Having been 
+                trained in traditional art, I'm passionate
+                about integrating art with technology.
+                </p>
+        </div>
+    </div>
+    <!--ABOUT Section-->
+    <section>
+        <div class="section-container">
+            <div class="col-lg-4">
+                <figure>
+                    <img class="image-pos" src="IMG_0983.JPG"
+                    alt="Maggie's headshot">
+                    <figcaption class="figcap-pos">
+                        Ramos, Christian. 09/02/24
+                    </figcaption>
+                </figure>                    
+            </div>
+            <div class="col-lg-7">
+                <section>
+                    <h1 class="h1-repos"> What I'm currently doing </h1>
+                    <div>                       
+                        <div class="current-repos">
+                        Currently, I work as a <strong>fabrication consultant</strong>
+                        at the Knapp Media Center, Wellesley College's makerspace. 
+                        As a fabrication consultant, I train patrons on how to 
+                        use the various machines offered at the makerspace, 
+                        which include 3D printers, sewing machines, and embroidery 
+                        machines. I also help troubleshoot the machines and organize 
+                        events at the makerspace to encourage inclusivity of the 
+                        larger student community.
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="h2-repos"> This past summer </h2>
+                    <div>
+                        <div class="summer-repos">
+                        I worked as an <strong>graphic design</strong> and <strong>brand 
+                        management intern</strong> at Aveyo Avocado Foods, a food company 
+                        startup, working on two teams to get ready for the launch of a 
+                        new product line.
+                        </div> 
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+</body>
+</html>
