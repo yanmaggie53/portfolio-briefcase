@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name=author content="Maggie Yan">
+    <title>Maggie Yan</title>
+</head>
+<body>
+<main>
+    <div class="header-bg-sm">
+        <div class="page container-fluid">
+            <div class="section-container-nav">
+                <a href="index.html"> 
+                    <h3>
+                    About
+                    </h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page container-fluid">
+        <!--HERO COPY-->
+        <div class="section-container">
+            <div class="hero-copy-secondary">
+                The
+            </div>
+            <div class="hero-copy-primary">
+                Design Portfolio
+            </div>
+                <p>
+                The following are some works from my 
+                design portfolio. Works include portraits, 
+                figure drawings, photography, and graphic
+                design.
+                </p>
+        </div>
+    </div>
+    <div class="page container-fluid">
+        <div class="section-container">
+            <ul class="thumbnail-list">
+                <li class="thumnmail-item">
+                    <figure>
+                        <img class="plastic-size" src="PlasticRain.JPG" 
+                        alt="Self portrait on microplastics">
+                        <figcaption>Plastic Rain, 2022.</figcaption>
+                    </figure>
+                </li>
+                <li class="thumnmail-item">
+                    <figure>
+                        <img class="infidel-size" src="Infidelity.JPG" 
+                        alt="Still life on abusive relationships">
+                        <figcaption>Infidelity, 2021.</figcaption>
+                    </figure>
+                </li>
+                <li class="thumnmail-item">
+                    <figure>
+                        <img class="crystal-size" src="Crystal.JPG" 
+                        alt="Figure drawing of Crystal sitting">
+                        <figcaption>Crystal, 2022.</figcaption>
+                    </figure>
+                </li>
+                <li class="thumnmail-item">
+                    <figure>
+                        <img class="cotton-size" src="CottonCandy.JPG" 
+                        alt="Pink clouds reflecting of high rise building">
+                        <figcaption>Cotton Candy, 2022.</figcaption>
+                    </figure>
+                </li>
+                <li class="thumnmail-item">
+                    <figure>
+                        <img class="bath-size" src="Bathroom.JPG"
+                        alt="Light reflecting off of bathroom wall">
+                        <figcaption>Bathroom, 2022.</figcaption>
+                    </figure>
+                </li>
+                <li class="thumnmail-item">
+                    <figure>
+                        <img class="graphic-size" src="GraphicDesign.JPG"
+                        alt="Flyer for Knapp Makerspace event">
+                        <figcaption>Knapp Makerspace flyer for a pop up card workshop, 2023.</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+
+</body>
+</html>
