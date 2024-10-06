@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="Maggie Yan" content="Goku's Family">
+    <title>Goku's Immediate Family</title>
+</head>
+<body>
+    <header>
+        <h1 class="header1-text">Goku's Immediate Family</h1>
+    </header>
+    <main>
+        <div class="column-container">
+            <div class= "column" style="background-color: rgb(28,68,149);">
+                <h2 class= "headerchi2-text">Chi Chi</h2>
+                <figure class="fig-container">
+                    <img class="chichi-size" src="ChiChi.jpg" alt="Picture of Chi Chi">
+                    <figcaption class="caption-stuff">
+                        Chi Chi, Goku's wife.
+                    </figcaption>
+                </figure>
+                <div>
+                <p style="color: rgb(251,189,66);">
+                    Chi Chi is the princess of Fire Mountain and the daughter
+                    of the Ox-King. She later marries Goku and becomes the 
+                    loving mother of Gohan and Goten. 
+                </p>
+                </div>
+                <div>
+                    <ul>
+                        <li style="color: rgb(251,189,66);">
+                            Was able to ride the Flying Nimbus because she was pure of 
+                            heart.
+                        </li>
+                        <li style="color: rgb(251,189,66);">
+                            Demonstrated superhuman abilities by outrunning a 
+                            dinosaur and throwing a blade to decapitate it. 
+                        </li>
+                        <li style="color: rgb(251,189,66);">
+                            Is the strongest human woman on the planet, enduring 
+                            a fight with Goku during a martial arts tournament.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class= "column" style="background-color: rgb(251,189,66);">
+                <h2 class= "headergoten2-text">Goten</h2>
+                <figure class= "fig-container">
+                    <img class="goten-size" src="GotenKid.jpg" alt="Picture of Goten as a kid">
+                    <figcaption class="caption-stuff">
+                        Goten as a kid, Goku's second son.
+                    </figcaption>
+                </figure>
+                <div>
+                <p style="color: rgb(28,68,149);">
+                    Son Goten is the youngest son of Goku and his wife Chi-Chi, 
+                    making him a Saiyan and Earthling hybrid. He is Gohan's 
+                    younger brother and Trunks' best friend. 
+                </p>
+                </div>
+                <div>
+                    <ul>
+                        <li style="color: rgb(28,68,149);">
+                            Is born nine months after the defeat of Cell in the 
+                            Cells Games Saga, therefore not meeting his father 
+                            Goku until the age of seven.
+                        </li>
+                        <li style="color: rgb(28,68,149);">
+                            Gains the ability to transform into a Super Saiyan at 
+                            a very young age. 
+                        </li>
+                        <li style="color: rgb(28,68,149);">
+                            Is the youngest known half-blooded Super Saiyan in the 
+                            series.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class= "column" style="background-color: rgb(231,108,36);">
+                <h2 class="header2-text">Gohan</h2>
+                <figure class="fig-container">
+                    <img class="gohan-size" src="GohanKid.jpg" alt="Picture of Gohan as a kid">
+                    <figcaption class="caption-stuff">
+                        Gohan as a kid, Goku's first son.
+                    </figcaption>
+                </figure>
+                <div>
+                <p>
+                    Son Gohan is a half-breed Saiyan and the elder son of Goku
+                    and his wife Chi-Chi, the older brother of Goten, the husband
+                    of Videl and father to Pan.
+                </p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            Posseses superhuman strength, durability, speed and 
+                            reflexes.
+                        </li>
+                        <li>
+                            Has the ability to become an Oozaru, a gigantic ape-like 
+                            creature, by absorbing waves from a full moon.
+                        </li>
+                        <li>
+                            Was the third youngest Saiyan to achieve the Super Saiyan
+                            transformation at the age of nine. 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+</html>
