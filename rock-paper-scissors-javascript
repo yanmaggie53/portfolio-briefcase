@@ -1,0 +1,157 @@
+//Author: Maggie Yan 
+
+//A function that compares two choices (rock, paper, or scissors) as strings,
+//returning 0 on a tie, 1 if the second argument wins, and -1 if the first 
+//argument wins 
+function rpsJudge(playerChoice, computerChoice) {
+    var choices = ["rock", "paper", "scissors"];
+    if (playerChoice === computerChoice) {
+        return 0;
+    }
+    if (
+        (playerChoice === "rock" && computerChoice === "scissors")||
+        (playerChoice === "scissors" && computerChoice === "paper")||
+        (playerChoice === "paper" && computerChoice === "rock")
+    ) {
+        return -1;
+    }
+
+    return 1;
+}
+
+//A function that takes an array (the array of test dates) as its argument 
+//and returns a random element from the array 
+function randomElt(arr) {
+    var randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}
+
+//A function that, given a player's choice as a string, puts a blue border
+//around the choice image 
+function highlightPlayerChoice(playerChoice) {
+    $("#player button").css("border-color", "white");
+    $(`#player button[data-choice= "${playerChoice}"]`).css("border-color", "blue");
+}
+
+//A function that, given the computer's choice as a string, sets the computer
+//image 
+function showComputerChoice(computerChoice) {
+    var images = {
+        "rock": "rps-images/rock-200.png",
+        "paper": "rps-images/paper-200.png",
+        "scissors": "rps-images/scissors-200.png"   
+    };
+    $(`#computerThrow`)
+    .attr("src", images[computerChoice])
+    .attr("alt", computerChoice)
+    .attr("aria-live", "polite");
+}
+
+//A function that resets the game (sets all the player choices
+//back to a white border and clears the previous message)
+function resetRPS() {
+    $(`#player button`).css("border-color", "white");
+    $(`#outcome`).text(" ");
+    $(`computerThrow`)
+    .attr("src","rps-images/question-200.png")
+    .attr("alt", "question mark")
+    .attr("aria-alive","polite");
+}
+
+//A function that resets the scores and also the game 
+function startOver() {
+    $(`#num_wins`).text("0");
+    $(`#num_losses`).text("0");
+    $(`#num_ties`).text("0");
+    $(`#outcome`).text(" ");
+    $(`#computerThrow`)
+        .attr("src", "rps-images/question-200.png")
+        .attr("alt", "question mark")
+        .attr("aria-alive","polite");
+    $(`#player button`).css("border-color", "white");
+}
+
+//Adding startOver function as an event handler for the "startOver" button
+$(document).ready(function(){
+    $(`#startOver`).on("click", function() {
+        startOver();
+    });
+});
+
+//A function that takes the three global variables (wins, losses, ties) as 
+//arguments to update the score display 
+function updateScores(wins, losses, ties) {
+    $(`#num_wins`).text(wins);
+    $(`#num_losses`).text(losses);
+    $(`#num_ties`).text(ties);
+}
+
+let wins = 0;
+let losses = 0;
+let ties = 0;
+
+//A function that takes playerChoice as an argument, uses resetUPS to reset 
+//the game to start the turn, uses highlightPlayerChoice to highlights the 
+//player's choice, uses randomElt to determine the computer's choice, uses 
+//showComputerChoice to display that choice, uses rpsJudge to compare the 
+//choices to see who won, updates the scores (global variables), uses 
+//updateScores to update the score display inserts a message on the page
+//saying the outcome 
+function playerTurn(playerChoice) {
+    resetRPS();
+    highlightPlayerChoice(playerChoice);
+    var choices = ["rock", "paper", "scissors"];
+    var computerChoice = randomElt(choices);
+    showComputerChoice(computerChoice);
+    var result = rpsJudge(playerChoice, computerChoice);
+    if (result === -1) {
+        wins++;
+        $(`#outcome`).text(`You won! ${playerChoice} beats ${computerChoice}.`);
+    }
+    else if (result === 1) {
+        losses++;
+        $(`#outcome`).text(`You lost! ${computerChoice} beats ${playerChoice}.`);
+    }
+    else {
+        ties++;
+        $(`#outcome`).text(`It's a tie! You both chose ${playerChoice}.`);
+    }
+
+updateScores(wins, losses, ties);
+
+}
+   
+
+//Testing functions
+
+//A function that tests to see if the fuction rpsJudge works 
+function rpsJudgeTester() {
+    let tests = [ ["rock", "rock", 0],
+                  ["rock", "paper", 1],
+                  ["rock", "scissors", -1],
+                  ["paper", "rock", -1],
+                  ["paper", "paper", 0],
+                  ["paper", "scissors", 1],
+                  ["scissors", "rock", 1],
+                  ["scissors", "scissors", 0],
+                  ["scissors", "paper", -1] ];
+    tests.forEach((arr) => {
+        let [choice1, choice2, correct_result] = arr;
+        let your_result = rpsJudge(choice1, choice2);
+        let outcome = (your_result == correct_result) ? "CORRECT": "WRONG";
+        console.log(`for ${choice1} versus ${choice2}, you computed ${your_result} which is ${outcome}`);
+    });
+}
+
+//Event handlers
+$("#player-throws-rock").click(function () {
+    playerTurn("rock")
+});
+$("#player-throws-paper").click(function () {
+    playerTurn("paper")
+});
+$("#player-throws-scissors").click(function () {
+    playerTurn("scissors")
+});
+rpsJudgeTester();
+
