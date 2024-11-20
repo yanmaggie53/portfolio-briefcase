@@ -1,0 +1,113 @@
+//Author: Maggie Yan 
+'use strict';
+
+//Invoking shuffleImages() function to create a random configuration 
+//of hidden images, only happen once when page loads
+shuffleImages();
+
+//A function that takes in one parameter, the id of the img element 
+//associated with the clicked on cell, changes the src attribute for 
+//the image with the given id to be the url returned by getImage()
+function showImage(id) {
+    var imgElement = document.getElementById(id);
+    imgElement.src = getImage(id);
+}
+
+//A function that takes in one parameter, the id of the img element
+//associated with the clicked on cell, changes a cell back to the 
+//blank image
+function hideImage(id) {
+    var imgElement = document.getElementById(id);
+    imgElement.src = "blank.jpg";
+}
+
+//Handler attachment: Invoking shuffleImages() to gather a jQuery set
+//of the clickable images, then uses the .each method on that array to 
+//add an event handler to each one; the argument to processClick() is a 
+//is the id of the image it's attached to, which is obtained by using 
+//the .attr method
+shuffleImages();
+$("img").each(function () {
+    var imgId = $(this).attr("id");
+    $(this).on("click", function() {
+        processClick(imgId);
+    });
+});
+
+//Global variables: clickNumber keeps track whether it's the first 
+//or second click (1 or 2), firstClickedId stores the id of the first
+//clicked cell, tries keeps track of the number of tries, and matches
+//keeps track of the number of matches
+let clickNumber = 1;
+let firstClickedId = null;
+let tries = 0;
+let matches = 0;
+
+//A function that takes in one argument, the id of the img that was
+//clicked on, invokes the showImage() function to reveal the hidden 
+//image, uses setTimeout() and hideImage() to conceal the image again 
+//after 1 second, distinguishes the first and second clicks, checks 
+//for matches, and keeps track of the status of the game
+function processClick(id) {
+    if (clickNumber === 1) {
+        showImage(id);
+        firstClickedId = id;
+        clickNumber = 2;
+    }
+    else if (clickNumber === 2) {
+        showImage(id);
+        tries++;
+        clickNumber = 1;
+
+        var firstImage = getImage(firstClickedId);
+        var secondImage = getImage(id);
+
+        if (firstImage === secondImage) {
+            matches++;
+            $("#msg").text("Match!");
+            firstClickedId = null;
+            
+            if (matches === 8) {
+                $("#msg").text("Game over!");
+            }
+        }
+        else {
+            setTimeout(function() {
+                hideImage(firstClickedId);
+                hideImage(id);
+                $("#msg").text("No match.");
+                firstClickedId = null;
+            }, 1000);
+        }
+        $("#tries").text(tries);
+        $("#matches").text(matches);
+    }
+}
+
+//A function that takes no parameters to allow the user to start 
+//a new game: first invokes shuffleImages() for a new arrangement
+//of images, resets the global variabls, resets the counter of tries
+//and matches, and changes all the images back to the blank image
+function startNewGame() {
+
+    shuffleImages();
+
+    clickNumber = 1;
+    firstClickedId = null;
+    tries = 0;
+    matches = 0;
+
+    $("#msg").text("");
+    $("#tries").text(tries);
+    $("#matches").text(matches);
+
+    $("img").each(function() {
+        hideImage($(this).attr("id"));
+    });
+}
+
+//Click handler that attaches the startNewGame() function for 
+//the Start New Game button on the page 
+$("#startNewGameButton").click(startNewGame);
+
+startNewGame();
