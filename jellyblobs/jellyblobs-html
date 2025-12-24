@@ -7,6 +7,10 @@
       <title>Jelly Blobs of Doom</title>
       <link rel='stylesheet' type='text/css' href='jellyblobs-css'/>
       <link href="https://fonts.googleapis.com/css?family=Asap|Ubuntu" rel="stylesheet">
+    <style>
+        body { color: #111 !important; background: #fff !important; }
+        #intro { color: #111 !important; }
+    </style>
     </head>
     
     <body>
