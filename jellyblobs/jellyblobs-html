@@ -31,10 +31,10 @@
         <script src="https://cs.wellesley.edu/~anderson/js/bounds/bounds-plugin.js"></script>
         <script src='https://cs.wellesley.edu/~cs204/assignments/jelly/random.js'></script>
         <script src='https://cs.wellesley.edu/~cs204/assignments/jelly/testing.js'></script>
-        <script src='Blob.js'></script>
-        <script src='Player.js'></script>
-        <script src='Enemy.js'></script>
-        <script src='game.js'></script>
+        <script src='jellyblobs-blob.js'></script>
+        <script src='jellyblobs-player.js'></script>
+        <script src='jellyblobs-enemy.js'></script>
+        <script src='jellyblobs-game.js'></script>
         
     </body>
 </html>
